@@ -1,3 +1,5 @@
+<?php
+
 // Cargar el archivo XML existente
 $dom = new DOMDocument();
 $dom->load('libros.xml');

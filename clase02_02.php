@@ -1,3 +1,5 @@
+<?php
+
 // Cargar el documento XML firmado
 $xml = new DOMDocument();
 $xml->load('factura_firmada.xml');

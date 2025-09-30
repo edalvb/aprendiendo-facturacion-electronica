@@ -1,3 +1,5 @@
+<?php
+
 // Crear un nuevo documento XML
 $xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = true; // Formato legible
