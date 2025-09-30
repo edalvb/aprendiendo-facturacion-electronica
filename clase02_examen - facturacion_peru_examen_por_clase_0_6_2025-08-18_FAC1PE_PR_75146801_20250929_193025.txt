@@ -1,0 +1,164 @@
+Estudiante: 75146801
+Grupo: 2025-08-18_FAC1PE_PR
+Cuestionario: facturacion_peru_examen_por_clase_0_6
+
+Pregunta 1: ¿Qué representa el archivo PFX o PKCS#12 en un proceso de firma?
+   A) 1) Un contenedor de hojas de estilo.
+   B) 2) Un contenedor que agrupa certificado público y clave privada.
+   C) 3) Un repositorio de esquemas XML.
+   D) 4) Un paquete de imágenes para el XML.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 2: ¿Cuál es el objetivo principal de la canonicalización C14N antes de firmar?
+   A) 1) Comprimir el documento.
+   B) 2) Normalizar el XML para producir un byte-stream estable.
+   C) 3) Traducir etiquetas al inglés.
+   D) 4) Encriptar el contenido.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 3: ¿Qué función cumple openssl_pkcs12_read en el flujo mostrado?
+   A) 1) Generar un nuevo certificado.
+   B) 2) Extraer clave privada y certificado desde un PFX.
+   C) 3) Validar esquemas XSD.
+   D) 4) Crear una firma simétrica.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 4: ¿Qué hace openssl_sign sobre el contenido canonicalizado?
+   A) 1) Calcula un hash y lo cifra con la clave privada.
+   B) 2) Inserta el certificado en el XML.
+   C) 3) Valida la firma existente.
+   D) 4) Encripta el XML con AES.
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+
+Pregunta 5: ¿Qué indica una firma de tipo enveloped en XMLDSig?
+   A) 1) La firma está fuera del documento.
+   B) 2) La firma reemplaza el documento.
+   C) 3) La firma está incrustada dentro del documento firmado.
+   D) 4) La firma está en un archivo binario separado.
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 6: ¿Cuál es el papel de SignedInfo dentro de ds:Signature?
+   A) 1) Guardar los datos del emisor fiscal.
+   B) 2) Contener los parámetros exactos de la firma y referencias a firmar.
+   C) 3) Almacenar el PDF adjunto.
+   D) 4) Describir los destinatarios del documento.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 7: ¿Qué describe ds:CanonicalizationMethod en SignedInfo?
+   A) 1) El algoritmo de cifrado simétrico.
+   B) 2) El método para normalizar nodos antes del firmado.
+   C) 3) El formato del certificado.
+   D) 4) El método de compresión del XML.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 8: ¿Qué describe ds:SignatureMethod?
+   A) 1) El algoritmo de digest usado en referencias.
+   B) 2) El algoritmo para firmar SignedInfo con la clave privada.
+   C) 3) El esquema XSD del documento.
+   D) 4) El algoritmo para cifrar la clave pública.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 9: ¿Qué representa una referencia con URI vacío en ds:Reference?
+   A) 1) Que no se firmará nada.
+   B) 2) Que se firma únicamente el elemento KeyInfo.
+   C) 3) Que la firma abarca el documento raíz.
+   D) 4) Que solo se firma el certificado.
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 10: ¿Cuál es la finalidad de ds:Transforms dentro de una referencia?
+   A) 1) Definir transformaciones aplicadas al dato previo al digest.
+   B) 2) Especificar los receptores del documento.
+   C) 3) Indicar el idioma del XML.
+   D) 4) Insertar comentarios en el XML.
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+
+Pregunta 11: ¿Qué diferencia hay entre ds:DigestMethod y ds:SignatureMethod?
+   A) 1) No existe diferencia, son sinónimos.
+   B) 2) DigestMethod define el hash de cada referencia y SignatureMethod el algoritmo de firma de SignedInfo.
+   C) 3) Ambos cifran la clave privada.
+   D) 4) Ambos validan el esquema del XML.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 12: ¿Qué función cumple ds:DigestValue?
+   A) 1) Guardar el certificado público.
+   B) 2) Almacenar el hash base64 de los datos transformados.
+   C) 3) Indicar la fecha de emisión.
+   D) 4) Contener la clave privada cifrada.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 13: ¿Qué se incluye usualmente dentro de ds:KeyInfo para validar la firma?
+   A) 1) Una hoja de estilos XSLT.
+   B) 2) Un bloque X509 con el certificado del firmante.
+   C) 3) Un manual de usuario.
+   D) 4) El archivo PFX sin cifrar.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 14: ¿Qué hace openssl_verify en el proceso de verificación?
+   A) 1) Regenera la clave privada.
+   B) 2) Comprueba la firma utilizando la clave pública y el contenido canonicalizado.
+   C) 3) Convierte el XML a JSON.
+   D) 4) Inserta la firma en el documento.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 15: ¿Por qué se codifica la firma en base64 al insertarla en el XML?
+   A) 1) Para reducir el tamaño del archivo.
+   B) 2) Para representar datos binarios como texto seguro en XML.
+   C) 3) Para encriptar la firma.
+   D) 4) Para validar contra el XSD.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 16: ¿Cuál es el rol de DOMDocument en este contexto?
+   A) 1) Servir como motor de cifrado.
+   B) 2) Cargar, manipular y serializar el XML.
+   C) 3) Proveer certificados de prueba.
+   D) 4) Configurar el servidor web.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 17: ¿Qué garantiza la inclusión de X509Certificate en KeyInfo?
+   A) 1) La confidencialidad del documento.
+   B) 2) La compresión del contenido.
+   C) 3) La posibilidad de obtener la clave pública del firmante para validar.
+   D) 4) La emisión automática de facturas.
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 18: ¿Qué tipo de criptografía se usa al firmar con RSA y verificar con un certificado?
+   A) 1) Criptografía simétrica.
+   B) 2) Criptografía asimétrica.
+   C) 3) Esteganografía.
+   D) 4) Hash reversible.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 19: ¿Qué sucede si el XML se modifica después de firmado sin actualizar la firma?
+   A) 1) La firma seguirá siendo válida.
+   B) 2) La verificación fallará por cambio en el digest.
+   C) 3) El certificado se renueva automáticamente.
+   D) 4) El XML se re-canonicaliza sin cambios.
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 20: ¿Cuál es el objetivo de usar transforms como enveloped-signature en la referencia?
+   A) 1) Excluir el nodo de firma del cálculo del hash.
+   B) 2) Incluir los comentarios XML en el hash.
+   C) 3) Eliminar los espacios en blanco visuales.
+   D) 4) Convertir el XML a formato binario.
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+

@@ -1,0 +1,164 @@
+Estudiante: 75146801
+Grupo: 2025-08-18_FAC1PE_PR
+Cuestionario: facturacion_peru_examen_por_clase_0_5
+
+Pregunta 1: ¿Qué clase de PHP se utiliza para crear el documento XML?
+   A) 1) SimpleXMLElement
+   B) 2) DOMDocument
+   C) 3) XMLWriter
+   D) 4) XMLReader
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 2: ¿Qué atributo se establece en DOMDocument para generar XML con formato legible?
+   A) 1) $doc->enableFormatting
+   B) 2) $doc->formatOutput = true
+   C) 3) $doc->useTabs = true
+   D) 4) $doc->preserveFormat = true
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 3: ¿Cuál es el nombre del nodo raíz del XML generado?
+   A) 1) FacturaElectronica
+   B) 2) Documento
+   C) 3) Invoice
+   D) 4) Comprobante
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 4: ¿Qué versión del estándar UBL se especifica en el nodo <cbc:UBLVersionID>?
+   A) 1) 1.0
+   B) 2) 2.0
+   C) 3) 2.1
+   D) 4) 3.0
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 5: ¿Cuál es el prefijo XML usado para componentes comunes básicos como fechas y montos?
+   A) 1) ext
+   B) 2) cac
+   C) 3) cbc
+   D) 4) ubl
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 6: ¿Dónde se reserva el espacio para insertar la firma digital?
+   A) 1) En un atributo del nodo raíz
+   B) 2) En el nodo <ext:ExtensionContent>
+   C) 3) En el nodo <cac:InvoiceLine>
+   D) 4) En <cbc:SignatureBlock>
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 7: ¿Cuál es el identificador del tipo de documento de factura según SUNAT?
+   A) 1) 01
+   B) 2) 03
+   C) 3) 07
+   D) 4) 08
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+
+Pregunta 8: ¿Qué atributo se usa en el nodo <cbc:ID> para identificar el RUC?
+   A) 1) documentType
+   B) 2) schemeID
+   C) 3) format
+   D) 4) taxpayerID
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 9: ¿Qué prefijo se usa para los elementos relacionados con información del emisor o cliente?
+   A) 1) ext
+   B) 2) cac
+   C) 3) xsd
+   D) 4) cbc
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 10: ¿Cuál es la clave usada en el array `$emisor` para definir la razón social?
+   A) 1) razon
+   B) 2) nombre
+   C) 3) ruc
+   D) 4) socialName
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+
+Pregunta 11: ¿Qué código de moneda se usa comúnmente para facturas en Perú?
+   A) 1) USD
+   B) 2) EUR
+   C) 3) PEN
+   D) 4) COP
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 12: ¿Qué tipo de operación representa el código '0101' en el nodo <cbc:ProfileID>?
+   A) 1) Exportación
+   B) 2) Nota de crédito
+   C) 3) Venta interna
+   D) 4) Venta exonerada
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 13: ¿Cuál es el nodo que representa la información total del impuesto?
+   A) 1) <cbc:TaxDetails>
+   B) 2) <cac:TotalImpuestos>
+   C) 3) <cac:TaxTotal>
+   D) 4) <cbc:IGV>
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 14: ¿Qué ID se utiliza para identificar el IGV en el nodo <cbc:ID>?
+   A) 1) 2000
+   B) 2) 1000
+   C) 3) IGV
+   D) 4) VAT
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 15: ¿Qué nodo contiene la suma total a pagar por la factura?
+   A) 1) <cbc:Total>
+   B) 2) <cbc:PayableAmount>
+   C) 3) <cbc:TotalPayment>
+   D) 4) <cbc:GrandTotal>
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 16: ¿Cómo se define la cantidad de productos en cada línea de factura?
+   A) 1) <cbc:ItemCount>
+   B) 2) <cbc:InvoicedQuantity>
+   C) 3) <cbc:Quantity>
+   D) 4) <cbc:ProductQty>
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 17: ¿Qué código representa una operación gravada - onerosa?
+   A) 1) 01
+   B) 2) 10
+   C) 3) 99
+   D) 4) 100
+   ➤ Respuesta del estudiante: B
+   ✔ Respuesta correcta: B
+
+Pregunta 18: ¿Qué método PHP se utiliza para guardar el XML en un archivo?
+   A) 1) file_put_contents()
+   B) 2) save()
+   C) 3) fwrite()
+   D) 4) echo
+   ➤ Respuesta del estudiante: A
+   ✔ Respuesta correcta: A
+
+Pregunta 19: ¿Qué nodo se utiliza para registrar el precio sin IGV del producto?
+   A) 1) <cbc:PrecioSinIGV>
+   B) 2) <cbc:ValorUnitario>
+   C) 3) <cbc:PriceAmount>
+   D) 4) <cbc:PriceWithoutTax>
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
+Pregunta 20: ¿Qué atributo del nodo <cbc:TaxAmount> indica la moneda?
+   A) 1) iso
+   B) 2) type
+   C) 3) currencyID
+   D) 4) moneda
+   ➤ Respuesta del estudiante: C
+   ✔ Respuesta correcta: C
+
