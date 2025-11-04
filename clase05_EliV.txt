@@ -1,0 +1,132 @@
+<?php
+    require_once 'cantidad_en_letras.php';
+    date_default_timezone_get("America/Lima");
+
+    $emisor = [
+        "tipo_doc"          => "6", // RUC
+        "ruc"              => "20123456789",
+        "razon_social"     => "empresa de prueba S.A.C.",
+        "nombre_comercial" => "empresa de prueba",
+        "direccion"        => "Av. pachacutec 6040",
+        "pais"             => "PE",
+        "departamento"     => "LIMA",
+        "provincia"        => "LIMA",
+        "distrito"         => "VILLA MARIA DEL TRIUNFO",
+        "ubigeo"           => "150101",
+        "usuario_sol"      => "MODDATOS",
+        "clave_sol"        => "moddatos"
+    ];
+
+    // print_r($emisor); 
+
+    $cliente = [
+        "tipo_doc" => "6",
+        "num_doc"  => "20480631286",
+        "razon"    => "CLIENTE DE PRUEBA S.A.",
+        "direccion"=> "Av. Las Flores 456 - Lima - Perú",
+        "pais"     => "PE"
+    ];
+
+    $comprobante = [
+        "tipodoc"              => "01", 
+        "serie"                => "F001",
+        "correlativo"          => "00000005",
+        "fecha_emision"        => "2023-02-28",
+        "moneda"               => "PEN",
+        "total_opgravadas"     => 0, 
+        "total_opexoneradas"   => 0, 
+        "total_opinafectas"    => 0, 
+        "igv"                  => 0,
+        "total"                => 0,
+        "total_texto"          => 0
+    ];
+
+    $detalle = array();
+
+    $detalle[] = [
+        "item"                    => 1,
+        "cod"                     => "PROD001",
+        "descripcion"             => "PRODUCTO GRAVADO",
+        "cantidad"                => 2,
+        "vu"                      => 100.00,
+        "pu"                      => 118.00,
+        "tipo_precio"             => "01",
+        "igv"                     => 36.00,
+        "porcentaje_igv"          => 18,
+        "valor_total"             => 200.00,
+        "importe_total"           => 236.00,
+        "unidad"                  => "NIU",
+        "codigo_afectacion_alt"   => "VAT",
+        "codigo_afectacion"       => "10",
+        "nombre_afectacion"       => "Gravado - Operación Onerosa",
+        "tipo_afectacion"         => "VAT"
+    ];
+
+    $detalle[] = [
+        "item"                    => 2,
+        "cod"                     => "PROD002",
+        "descripcion"             => "PRODUCTO EXONERADO",
+        "cantidad"                => 1,
+        "vu"                      => 50.00,
+        "pu"                      => 50.00,
+        "tipo_precio"             => "01",
+        "igv"                     => 0.00,
+        "porcentaje_igv"          => 0,
+        "valor_total"             => 50.00,
+        "importe_total"           => 50.00,
+        "unidad"                  => "NIU",
+        "codigo_afectacion_alt"   => "VAT",
+        "codigo_afectacion"       => "20",
+        "nombre_afectacion"       => "Exonerado - Operación Onerosa",
+        "tipo_afectacion"         => "VAT"
+    ];
+
+    $detalle[] = [
+        "item"                    => 3,
+        "cod"                     => "PROD003",
+        "descripcion"             => "PRODUCTO INAFECTO",
+        "cantidad"                => 1,
+        "vu"                      => 80.00,
+        "pu"                      => 80.00,
+        "tipo_precio"             => "01",
+        "igv"                     => 0.00,
+        "porcentaje_igv"          => 0,
+        "valor_total"             => 80.00,
+        "importe_total"           => 80.00,
+        "unidad"                  => "NIU",
+        "codigo_afectacion_alt"   => "VAT",
+        "codigo_afectacion"       => "30",
+        "nombre_afectacion"       => "Inafecto - Operación Onerosa",
+        "tipo_afectacion"         => "VAT"
+    ];
+
+    $op_gravadas   = 0;
+    $op_inafectas  = 0;
+    $op_exoneradas = 0;
+    $igv_total     = 0;
+    $total_general = 0;
+
+    foreach ($detalle as $k => $v) {
+        if ($v['codigo_afectacion'] == '10') {
+            $op_gravadas += $v['valor_total'];
+        }
+        if ($v['codigo_afectacion'] == '20') {
+            $op_exoneradas += $v['valor_total'];
+        }
+        if ($v['codigo_afectacion'] == '30') {
+            $op_inafectas += $v['valor_total'];
+        }
+
+        $igv_total     += $v['igv'];
+        $total_general += $v['importe_total'];
+    }
+
+
+    $comprobante["total_opgravadas"]   = $op_gravadas;
+    $comprobante["total_opexoneradas"] = $op_exoneradas;
+    $comprobante["total_opinafectas"]  = $op_inafectas;
+    $comprobante["igv"]                = $igv_total;
+    $comprobante["total"]              = $total_general;
+    $comprobante["total_texto"]        = CantidadEnLetras($total_general);
+
+?>
